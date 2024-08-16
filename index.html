@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="path/to/tailwind.css" rel="stylesheet">
+    <style>
+        .hamburger-menu {
+            display: none;
+        }
+        .hamburger-menu.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-[#F8E3C6] font-[Inconsolata]">
+    <header class="flex items-center justify-between px-8 py-4">
+        <div class="flex items-center">
+            <img src="website_imgs/logo/inspirai_LOGO.png" alt="Logo" class="w-16 h-16 rounded-full">
+            <h1 class="text-4xl font-bold ml-4">Inspirai</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="bg-transparent text-black p-2 rounded hover:bg-[#e2b390]">
+                <svg class="w-6 h-6"><!-- pencil icon svg here --></svg>
+            </button>
+            <button class="bg-transparent text-black p-2 rounded hover:bg-[#e2b390]">
+                <svg class="w-6 h-6"><!-- search icon svg here --></svg>
+            </button>
+            <button id="hamburger" class="bg-transparent text-black p-2 rounded hover:bg-[#e2b390]">
+                <img src="website_imgs/icons/genres.png" class="w-8 h-8">
+            </button>
+        </div>
+    </header>
+
+    <main class="px-8 py-4">
+        <section class="flex space-x-8">
+            <nav id="hamburger-menu" class="flex flex-col space-y-6 hamburger-menu">
+                <a href="#" class="flex flex-col items-center space-y-2">
+                    <img src="website_imgs/icons/genres.png" class="w-8 h-8">
+                    <span>Genres</span>
+                </a>
+                <a href="#" class="flex flex-col items-center space-y-2">
+                    <img src="website_imgs/icons/popular.PNG" class="w-12 h-12">
+                    <span>Popular</span>
+                </a>
+                <a href="#" class="flex flex-col items-center space-y-2">
+                    <img src="website_imgs/icons/characters.PNG" class="w-12 h-12">
+                    <span>Characters</span>
+                </a>
+                <a href="#" class="flex flex-col items-center space-y-2">
+                    <img src="website_imgs/icons/challenges.PNG" class="w-12 h-12">
+                    <span>Challenges</span>
+                </a>
+            </nav>
+
+            <div class="flex-1">
+                <section class="flex space-x-8 justify-center">
+                    <div class="flex flex-col items-center">
+                        <h2 class="text-xl font-bold">Plots &rarr;</h2>
+                        <img src="website_imgs/main_imgs/plot.png" alt="Plots Image" class="w-96 h-96 object-cover rounded-lg mt-2">
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <h2 class="text-xl font-bold">Characters &rarr;</h2>
+                        <img src="website_imgs/main_imgs/characters.webp" alt="Characters Image" class="w-96 h-96 object-cover rounded-lg mt-2">
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <h2 class="text-xl font-bold">World Building &rarr;</h2>
+                        <img src="website_imgs/main_imgs/world_building.png" alt="World Building Image" class="w-96 h-96 object-cover rounded-lg mt-2">
+                    </div>
+                </section>
+
+                <section class="mt-8">
+                    <h2 class="text-xl font-bold">Genres &rarr;</h2>
+                    <div class="grid grid-cols-7 gap-4 mt-4">
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <img src="website_imgs/genres/adventure.svg" alt="Adventure" class="w-12 h-12 mx-auto">
+                            <p class="mt-2">Adventure</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <img src="website_imgs/genres/action.svg" alt="Action" class="w-12 h-12 mx-auto">
+                            <p class="mt-2">Action</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <img src="website_imgs/genres/mystery.svg" alt="Mystery" class="w-12 h-12 mx-auto">
+                            <p class="mt-2">Mystery</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <img src="website_imgs/genres/apocalypse.svg" alt="Apocalypse" class="w-12 h-12 mx-auto">
+                            <p class="mt-2">Apocalypse</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <img src="website_imgs/genres/drama.svg" alt="Drama" class="w-12 h-12 mx-auto">
+                            <p class="mt-2">Drama</p>
+                        </div>                        
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <img src="website_imgs/genres/fantasy.svg" alt="Fantasy" class="w-12 h-12 mx-auto">
+                            <p class="mt-2">Fantasy</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <img src="website_imgs/genres/medieval.svg" alt="Medieval" class="w-12 h-12 mx-auto">
+                            <p class="mt-2">Medieval</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('hamburger-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
