@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/src/website_imgs/logo/inspirai_LOGO.png"/>
+    <style>
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .sidebar-closed {
+            transform: translateX(-100%);
+        }
+        .sidebar-open {
+            transform: translateX(0);
+        }
+        .sidebar-open .main-content {
+            margin-left: 16rem; 
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .sidebar-open #hamburger {
+            display: none;
+        }
+        .sidebar-open .sidebar-title-icon {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-[#F8E3C6] font-[Inconsolata]">
+    <header class="flex flex-col items-center px-8 py-4 relative z-10">
+        <div class="flex items-center justify-between w-full">
+            <button id="hamburger" class="bg-transparent text-black p-2 rounded hover:bg-[#e2b390]">
+                <img src="/src/website_imgs/icons/hamburger.png" class="w-8 h-8">
+            </button>
+            <div class="flex items-center">
+                <img src="/src/website_imgs/logo/inspirai_LOGO.png" alt="Logo" class="w-20 h-20 rounded-full">
+                <h1 class="text-7xl font-bold ml-4 pl-4">Inspirai</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center bg-indigo-100 border border-indigo-300 rounded-lg shadow-md">
+                    <input type="text" placeholder="Search..." class="px-4 py-2 w-80 outline-none bg-indigo-100 text-gray-900 border-none rounded-l-lg" />
+                    <button class="p-2 rounded-r-lg hover:bg-indig o-200">
+                        <img src="/src/website_imgs/icons/search.PNG" class="w-8 h-8">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-8 py-4 relative z-0 main-content">
+        <hr class="my-8 border-t-4 border-indigo-600">
+
+        <section class="flex space-x-8">
+            <!-- Sidebar Menu -->
+            <nav id="hamburger-menu" class="fixed top-0 left-0 w-64 h-full bg-white border-r border-indigo-300 sidebar sidebar-closed z-50">
+                <div class="p-12">
+                </div>
+                <div class="flex flex-col space-y-6 p-4">
+                    <a href="#" class="flex flex-col items-center space-y-2 bg-indigo-300 py-2 px-1 rounded-lg">
+                        <img src="/src/website_imgs/icons/pencil.PNG" class="w-8 h-8">
+                    </a>
+                    <a href="#" class="flex flex-col items-center space-y-2">
+                        <img src="/src/website_imgs/icons/genres.png" class="w-8 h-8">
+                        <span>Genres</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center space-y-2">
+                        <img src="/src/website_imgs/icons/popular.PNG" class="w-12 h-12">
+                        <span>Popular</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center space-y-2">
+                        <img src="/src/website_imgs/icons/characters.PNG" class="w-12 h-12">
+                        <span>Characters</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center space-y-2">
+                        <img src="/src/website_imgs/icons/challenges.PNG" class="w-12 h-12">
+                        <span>Challenges</span>
+                    </a>
+                    <!-- Login / Signup Buttons -->
+                    <div class="mt-auto flex flex-col space-y-4 p-4">
+                        <a href="/login" class="bg-indigo-300 text-white py-2 px-4 rounded-lg text-center hover:bg-indigo-400">Login</a>
+                        <a href="/signup" class="bg-indigo-300 text-white py-2 px-4 rounded-lg text-center hover:bg-indigo-400">Signup</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="flex-1">
+                <section class="flex space-x-48 justify-center">
+                    <div class="flex flex-col items-center">
+                        <h2 class="text-xl font-bold">Plots &rarr;</h2>
+                        <img src="/src/website_imgs/main_imgs/plot.png" alt="Plots Image" class="w-96 h-96 object-cover rounded-lg mt-2">
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <h2 class="text-xl font-bold">Characters &rarr;</h2>
+                        <img src="/src/website_imgs/main_imgs/characters.webp" alt="Characters Image" class="w-96 h-96 object-cover rounded-lg mt-2">
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <h2 class="text-xl font-bold">World Building &rarr;</h2>
+                        <img src="/src/website_imgs/main_imgs/world_building.png" alt="World Building Image" class="w-96 h-96 object-cover rounded-lg mt-2">
+                    </div>
+                </section>
+
+                <section class="mt-8">
+                    <h2 class="text-xl font-bold">Genres &rarr;</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 mt-4">
+                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
+                            <img src="/src/website_imgs/genres/adventure.svg" alt="Adventure" class="w-full h-3/4 object-cover">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
+                                <p class="text-white font-semibold">Adventure</p>
+                            </div>
+                        </div>
+                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
+                            <img src="/src/website_imgs/genres/action.svg" alt="Action" class="w-full h-3/4 object-cover">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
+                                <p class="text-white font-semibold">Action</p>
+                            </div>
+                        </div>
+                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
+                            <img src="/src/website_imgs/genres/mystery.svg" alt="Mystery" class="w-full h-3/4 object-cover">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
+                                <p class="text-white font-semibold">Mystery</p>
+                            </div>
+                        </div>
+                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
+                            <img src="/src/website_imgs/genres/apocalypse.svg" alt="Apocalypse" class="w-full h-3/4 object-cover">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
+                                <p class="text-white font-semibold">Apocalypse</p>
+                            </div>
+                        </div>
+                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
+                            <img src="/src/website_imgs/genres/drama.svg" alt="Drama" class="w-full h-3/4 object-cover">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
+                                <p class="text-white font-semibold">Drama</p>
+                            </div>
+                        </div>
+                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
+                            <img src="/src/website_imgs/genres/fantasy.svg" alt="Fantasy" class="w-full h-3/4 object-cover">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
+                                <p class="text-white font-semibold">Fantasy</p>
+                            </div>
+                        </div>
+                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
+                            <img src="/src/website_imgs/genres/medieval.svg" alt="Medieval" class="w-full h-3/4 object-cover">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
+                                <p class="text-white font-semibold">Medieval</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
