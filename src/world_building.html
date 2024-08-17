@@ -31,11 +31,18 @@
             transform: translateX(0);
         }
         .sidebar-open ~ .main-content {
-            margin-left: 8rem; 
+            margin-left: 16rem; 
             transition: margin-left 0.3s ease-in-out;
         }
         .sidebar-title-icon {
             display: none;
+        }
+        .blurred-bar {
+            background-image: url('/src/website_imgs/world_building/world.png');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            height: 300px; 
         }
         .main-content.shifted {
             margin-left: 8rem; 
@@ -65,6 +72,12 @@
 
     <main class="px-8 py-4 relative z-0 main-content">
         <hr class="my-8 border-t-4 border-indigo-600">
+        <div class="relative">
+            <div class="blurred-bar"></div> 
+            <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-purple-400 text-8xl font-bold p-4 rounded font-serif">WORLD BUILDING</p>
+            </div>
+        </div>
 
         <section class="flex">
             <nav id="hamburger-menu" class="sidebar sidebar-closed bg-white border-r border-indigo-300">
@@ -97,65 +110,31 @@
                 </div>
             </nav>
 
-            <div class="flex-1">
-                <section class="flex space-x-48 justify-center">
-                    <div class="flex flex-col items-center">
-                        <h2 class="text-xl font-bold">Plots &rarr;</h2>
-                        <img src="/src/website_imgs/main_imgs/plot.png" alt="Plots Image" class="w-96 h-96 object-cover rounded-lg mt-2">
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <h2 class="text-xl font-bold">Characters &rarr;</h2>
-                        <img src="/src/website_imgs/main_imgs/characters.webp" alt="Characters Image" class="w-96 h-96 object-cover rounded-lg mt-2">
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <h2 class="text-xl font-bold">World Building &rarr;</h2>
-                        <img src="/src/website_imgs/main_imgs/world_building.png" alt="World Building Image" class="w-96 h-96 object-cover rounded-lg mt-2">
-                    </div>
-                </section>
-
+            <div class="flex-1 flex justify-center">
                 <section class="mt-8">
-                    <h2 class="text-xl font-bold">Genres &rarr;</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 mt-4">
-                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
-                            <img src="/src/website_imgs/genres/adventure.svg" alt="Adventure" class="w-full h-3/4 object-cover">
-                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
-                                <p class="text-white font-semibold">Adventure</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 mt-4 max-w-fullxl">
+                        <div class="relative bg-white rounded-lg border-8 border-indigo-300 overflow-hidden h-80">
+                            <img src="/src/website_imgs/world_building/demon.png" class="w-full h-full object-cover card-img">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4 flex items-center justify-between card-content">
+                                <p class="text-white font-semibold">Demon King's Castle &rarr;</p>
                             </div>
                         </div>
-                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
-                            <img src="/src/website_imgs/genres/action.svg" alt="Action" class="w-full h-3/4 object-cover">
-                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
-                                <p class="text-white font-semibold">Action</p>
+                        <div class="relative bg-white rounded-lg border-8 border-indigo-300 overflow-hidden h-80">
+                            <img src="/src/website_imgs/world_building/zombie.png" class="w-full h-full object-cover card-img">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4 flex items-center justify-between card-content">
+                                <p class="text-white font-semibold">The Zombie Village &rarr;</p>
                             </div>
                         </div>
-                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
-                            <img src="/src/website_imgs/genres/mystery.svg" alt="Mystery" class="w-full h-3/4 object-cover">
-                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
-                                <p class="text-white font-semibold">Mystery</p>
+                        <div class="relative bg-white rounded-lg border-8 border-indigo-300 overflow-hidden h-80">
+                            <img src="/src/website_imgs/world_building/space.png" class="w-full h-full object-cover card-img">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4 flex items-center justify-between card-content">
+                                <p class="text-white font-semibold">A New Planet &rarr;</p>
                             </div>
                         </div>
-                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
-                            <img src="/src/website_imgs/genres/apocalypse.svg" alt="Apocalypse" class="w-full h-3/4 object-cover">
-                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
-                                <p class="text-white font-semibold">Apocalypse</p>
-                            </div>
-                        </div>
-                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
-                            <img src="/src/website_imgs/genres/drama.svg" alt="Drama" class="w-full h-3/4 object-cover">
-                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
-                                <p class="text-white font-semibold">Drama</p>
-                            </div>
-                        </div>
-                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
-                            <img src="/src/website_imgs/genres/fantasy.svg" alt="Fantasy" class="w-full h-3/4 object-cover">
-                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
-                                <p class="text-white font-semibold">Fantasy</p>
-                            </div>
-                        </div>
-                        <div class="relative bg-white rounded-lg border-4 border-indigo-300 overflow-hidden">
-                            <img src="/src/website_imgs/genres/medieval.svg" alt="Medieval" class="w-full h-3/4 object-cover">
-                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4">
-                                <p class="text-white font-semibold">Medieval</p>
+                        <div class="relative bg-white rounded-lg border-8 border-indigo-300 overflow-hidden h-80">
+                            <img src="/src/website_imgs/world_building/frozen.png" class="w-full h-full object-cover card-img">
+                            <div class="absolute bottom-0 w-full bg-indigo-300 text-left border-t-4 border-indigo-300 py-2 px-4 flex items-center justify-between card-content">
+                                <p class="text-white font-semibold">A Frozen World &rarr;</p>
                             </div>
                         </div>
                     </div>
@@ -164,5 +143,5 @@
         </section>
     </main>
     <script src="app.js"></script>
-</body>
+    </body>
 </html>
